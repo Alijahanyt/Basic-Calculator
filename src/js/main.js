@@ -4,7 +4,7 @@ const display = document.getElementById('screen');
 
 function appendToScreen(value) {
     display.value += value;
-    
+
 }
 
 function clearScreen() {
@@ -12,6 +12,6 @@ function clearScreen() {
 }
 
 function calculateResult() {
-        display.value = eval(display.value);
+    display.value = eval(display.value);
 
 }
