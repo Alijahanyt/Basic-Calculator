@@ -35,3 +35,40 @@ function calculateResult() {
 function calcSqrt() {
     display.value = Math.sqrt(display.value);
 }
+
+//keyboard 
+
+// Listen for keyboard input
+document.addEventListener("keydown", function (event) {
+    const key = event.key;
+
+    // Allow digits (0–9)
+    if (!isNaN(key)) {
+        appendToScreen(key);
+    }
+
+    // Allow operators
+    if (["+", "-", "*", "/", "%", "."].includes(key)) {
+        appendToScreen(key);
+    }
+
+    // Press Enter or = to calculate
+    if (key === "Enter" || key === "=") {
+        calculateResult();
+    }
+
+    // Backspace deletes last character
+    if (key === "Backspace") {
+        display.value = display.value.slice(0, -1);
+    }
+
+    // Escape clears the screen
+    if (key === "Escape") {
+        clearScreen();
+    }
+
+    // Prevent accidental page actions (optional)
+    if (["/", "*", "Enter"].includes(key)) {
+        event.preventDefault();
+    }
+});
