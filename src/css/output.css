@@ -254,6 +254,9 @@
   .p-2 {
     padding: calc(var(--spacing) * 2);
   }
+  .p-4 {
+    padding: calc(var(--spacing) * 4);
+  }
   .py-4 {
     padding-block: calc(var(--spacing) * 4);
   }
@@ -263,6 +266,9 @@
   }
   .text-\[\#b267aa\] {
     color: #b267aa;
+  }
+  .text-white {
+    color: var(--color-white);
   }
   .underline {
     text-decoration-line: underline;
@@ -275,19 +281,9 @@
     --tw-outline-style: none;
     outline-style: none;
   }
-  .\*\:h-\[50px\] {
-    :is(& > *) {
-      height: 50px;
-    }
-  }
   .\*\:h-\[70px\] {
     :is(& > *) {
       height: 70px;
-    }
-  }
-  .\*\:w-\[50px\] {
-    :is(& > *) {
-      width: 50px;
     }
   }
   .\*\:w-\[70px\] {
